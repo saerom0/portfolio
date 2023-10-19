@@ -22,8 +22,25 @@ table {
 
 .wrap {
 	&::after {
-		content: '';
+		content: "";
 		display: block;
 		clear: both;
 	}
+}
+
+h1 {
+	font-size: 45px;
+	font-weight: bold;
+}
+h2 {
+	font-size: 20px;
+}
+p,
+span {
+	font-size: 14px;
+}
+
+.container {
+	width: 80%;
+	margin: 100px auto;
 }

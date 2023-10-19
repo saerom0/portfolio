@@ -1,0 +1,84 @@
+@charset "UTF-8";
+@import "_reset.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap");
+
+@mixin shortcut-btn {
+	width: 200px;
+	height: 55px;
+	background-color: #282828;
+	border-radius: 50px;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 330px;
+	height: 100vh;
+	background-color: #8567fd;
+	z-index: 3;
+	#menu {
+		height: 100%;
+		margin: 100px auto;
+		.profile {
+			width: 200px;
+			height: 200px;
+			border-radius: 50%;
+			overflow: hidden;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				background-color: #eee;
+			}
+		}
+		.nav-list {
+			height: 40%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			gap: 20px;
+			li {
+				width: 100%;
+				height: 100%;
+				a {
+					width: 100%;
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-family: "Montserrat";
+					color: #fff;
+				}
+			}
+		}
+	}
+}
+
+main {
+	position: absolute;
+	top: 0;
+	left: 330px;
+	width: calc(100% - 330px);
+	section#intro {
+		position: relative;
+		height: 100vh;
+		.container {
+			p {
+				position: relative;
+				width: 400px;
+				&::after {
+					display: block;
+					position: absolute;
+					top: 0;
+					left: -15px;
+					width: 3px;
+					height: 100%;
+					content: "";
+					background-color: #eee;
+				}
+			}
+		}
+	}
+}

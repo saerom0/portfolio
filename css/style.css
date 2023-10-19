@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+fieldset {
+  border: none;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+.wrap::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+h1 {
+  font-size: 45px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p,
+span {
+  font-size: 14px;
+}
+
+.container {
+  width: 80%;
+  margin: 100px auto;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 330px;
+  height: 100vh;
+  background-color: #8567fd;
+  z-index: 3;
+}
+header #menu {
+  height: 100%;
+  margin: 100px auto;
+}
+header #menu .profile {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+header #menu .profile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background-color: #eee;
+}
+header #menu .nav-list {
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+header #menu .nav-list li {
+  width: 100%;
+  height: 100%;
+}
+header #menu .nav-list li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat";
+  color: #fff;
+}
+
+main {
+  position: absolute;
+  top: 0;
+  left: 330px;
+  width: calc(100% - 330px);
+}
+main section#intro {
+  position: relative;
+  height: 100vh;
+}
+main section#intro .container p {
+  position: relative;
+  width: 400px;
+}
+main section#intro .container p::after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -15px;
+  width: 3px;
+  height: 100%;
+  content: "";
+  background-color: #eee;
+}
+
+/*# sourceMappingURL=style.css.map */
