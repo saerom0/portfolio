@@ -23,15 +23,10 @@ table {
   border-collapse: collapse;
 }
 
-.wrap::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
 h1 {
   font-size: 45px;
   font-weight: bold;
+  font-family: "Montserrat";
 }
 
 h2 {
@@ -43,9 +38,18 @@ span {
   font-size: 14px;
 }
 
+section {
+  height: 100vh;
+}
+
 .container {
   width: 80%;
   margin: 100px auto;
+}
+.container::after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 header {
@@ -54,12 +58,17 @@ header {
   left: 0;
   width: 330px;
   height: 100vh;
-  background-color: #8567fd;
+  background-color: #8567FD;
   z-index: 3;
 }
 header #menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   height: 100%;
-  margin: 100px auto;
+  padding-top: 150px;
+  padding-bottom: 150px;
 }
 header #menu .profile {
   width: 200px;
@@ -91,7 +100,7 @@ header #menu .nav-list li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Montserrat";
+  font-family: "Montserrat", sans-serif;
   color: #fff;
 }
 
@@ -103,21 +112,85 @@ main {
 }
 main section#intro {
   position: relative;
-  height: 100vh;
+}
+main section#intro .container {
+  width: 60%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+main section#intro .container h1 {
+  font-size: 60px;
+  margin-bottom: 50px;
+}
+main section#intro .container h1 b {
+  display: block;
+  margin-top: 20px;
 }
 main section#intro .container p {
   position: relative;
-  width: 400px;
+  width: 100%;
+  margin-left: 20px;
+  margin-bottom: 100px;
 }
 main section#intro .container p::after {
   display: block;
   position: absolute;
   top: 0;
   left: -15px;
-  width: 3px;
+  width: 5px;
   height: 100%;
   content: "";
+  background-color: #282828;
+}
+main section#intro .container .btn-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main section#intro .container .btn-wrap .shortcut-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 55px;
+  background-color: #282828;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 13px;
+  font-family: "Noto Sans KR", sans-serif;
+  transition: 0.3s;
+  width: 300px;
+}
+main section#intro .container .btn-wrap .shortcut-btn:hover {
+  background-color: #8567FD;
+}
+main section#intro .container .btn-wrap .shortcut-btn i {
+  margin-left: 6px;
+  margin-top: 1.5px;
+}
+main section#skills {
   background-color: #eee;
+}
+main section#skills .container .skills-sec {
+  margin-bottom: 50px;
+}
+main section#skills .container .skills-sec h2 {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  margin-bottom: 30px;
+}
+main section#skills .container .skills-sec h2::after {
+  display: block;
+  position: absolute;
+  content: "";
+  left: -8px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #282828;
 }
 
 /*# sourceMappingURL=style.css.map */

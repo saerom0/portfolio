@@ -20,17 +20,11 @@ table {
 	border-collapse: collapse;
 }
 
-.wrap {
-	&::after {
-		content: "";
-		display: block;
-		clear: both;
-	}
-}
 
 h1 {
 	font-size: 45px;
 	font-weight: bold;
+	font-family: 'Montserrat';
 }
 h2 {
 	font-size: 20px;
@@ -39,8 +33,16 @@ p,
 span {
 	font-size: 14px;
 }
-
+section{
+	height: 100vh;
+}
 .container {
 	width: 80%;
 	margin: 100px auto;
+	//float 해제
+	&::after {
+		content: "";
+		display: block;
+		clear: both;
+	}
 }

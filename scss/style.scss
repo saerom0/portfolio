@@ -2,11 +2,30 @@
 @import "_reset.scss";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Noto+Sans+KR:wght@400;500;700;800&display=swap");
 
+$main-color: #8567FD;
+$light-color: #B19EFD;
+$eng-font : 'Montserrat',sans-serif;
+$kor-font : 'Noto Sans KR', sans-serif;
+
 @mixin shortcut-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 200px;
 	height: 55px;
 	background-color: #282828;
 	border-radius: 50px;
+	color: #fff;
+	font-size: 13px;
+	font-family: $kor-font;
+	transition: 0.3s;
+	&:hover{
+		background-color: $main-color;
+	}
+	i{
+		margin-left: 6px;
+		margin-top: 1.5px;
+	}
 }
 
 header {
@@ -15,11 +34,16 @@ header {
 	left: 0;
 	width: 330px;
 	height: 100vh;
-	background-color: #8567fd;
+	background-color: $main-color;
 	z-index: 3;
 	#menu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
 		height: 100%;
-		margin: 100px auto;
+		padding-top: 150px;
+		padding-bottom: 150px;
 		.profile {
 			width: 200px;
 			height: 200px;
@@ -48,7 +72,7 @@ header {
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					font-family: "Montserrat";
+					font-family: $eng-font;
 					color: #fff;
 				}
 			}
@@ -63,20 +87,67 @@ main {
 	width: calc(100% - 330px);
 	section#intro {
 		position: relative;
-		height: 100vh;
 		.container {
+			width: 60%;
+			height: 100%;
+			margin: auto;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			h1{
+				font-size: 60px;
+				margin-bottom: 50px;
+				b{
+					display: block;
+					margin-top: 20px;
+				}
+			}
 			p {
 				position: relative;
-				width: 400px;
+				width: 100%;
+				margin-left: 20px;
+				margin-bottom: 100px;
 				&::after {
 					display: block;
 					position: absolute;
 					top: 0;
 					left: -15px;
-					width: 3px;
+					width: 5px;
 					height: 100%;
 					content: "";
-					background-color: #eee;
+					background-color: #282828;
+				}
+			}
+			.btn-wrap{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				.shortcut-btn{
+					@include shortcut-btn();
+					width: 300px;
+				}
+			}
+		}
+	}
+	section#skills{
+		background-color: #eee;
+		.container{
+			.skills-sec{
+				margin-bottom: 50px;
+				h2{
+					font-family: $eng-font;
+					position: relative;
+					margin-bottom: 30px;
+					&::after{
+						display: block;
+						position: absolute;
+						content: '';
+						left: -8px;
+						top:0;
+						width: 3px;
+						height: 100%;
+						background-color: #282828;
+					}
 				}
 			}
 		}
