@@ -112,6 +112,7 @@ main {
 }
 main section#intro {
   position: relative;
+  background: url(../image/intro_bg.jpg) no-repeat center/cover fixed;
 }
 main section#intro .container {
   width: 60%;
@@ -124,12 +125,14 @@ main section#intro .container {
 main section#intro .container h1 {
   font-size: 60px;
   margin-bottom: 50px;
+  color: #fff;
 }
 main section#intro .container h1 b {
   display: block;
   margin-top: 20px;
 }
 main section#intro .container p {
+  color: #fff;
   position: relative;
   width: 100%;
   margin-left: 20px;
@@ -206,6 +209,10 @@ main section#skills .container .skills-sec ul.certificate-list li {
   flex-direction: row;
   width: 100%;
   justify-content: flex-start;
+}
+main section#skills .container .skills-sec ul.certificate-list li .certificate-logo {
+  width: 40px;
+  margin-right: 20px;
 }
 main section#skills .container .skills-sec ul.certificate-list li .certificate-date {
   display: inline-block;

@@ -87,6 +87,7 @@ main {
 	width: calc(100% - 330px);
 	section#intro {
 		position: relative;
+		background: url(../image/intro_bg.jpg) no-repeat center/cover fixed;
 		.container {
 			width: 60%;
 			height: 100%;
@@ -97,12 +98,14 @@ main {
 			h1{
 				font-size: 60px;
 				margin-bottom: 50px;
+				color: #fff;
 				b{
 					display: block;
 					margin-top: 20px;
 				}
 			}
 			p {
+				color: #fff;
 				position: relative;
 				width: 100%;
 				margin-left: 20px;
@@ -161,6 +164,10 @@ main {
 							flex-direction: row;
 							width: 100%;
 							justify-content: flex-start;
+							.certificate-logo{
+								width: 40px;
+								margin-right: 20px;
+							}
 							.certificate-date{
 								display: inline-block;
 								margin-right: 20px;
