@@ -52,6 +52,27 @@ section {
   clear: both;
 }
 
+a.shortcut-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 55px;
+  background-color: #282828;
+  border-radius: 50px;
+  color: #fff;
+  font-size: 13px;
+  font-family: "Noto Sans KR", sans-serif;
+  transition: 0.3s;
+}
+a.shortcut-btn:hover {
+  background-color: #8567FD;
+}
+a.shortcut-btn i {
+  margin-left: 6px;
+  margin-top: 1.5px;
+}
+
 header {
   position: fixed;
   top: 0;
@@ -154,25 +175,7 @@ main section#intro .container .btn-wrap {
   align-items: center;
 }
 main section#intro .container .btn-wrap .shortcut-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 200px;
-  height: 55px;
-  background-color: #282828;
-  border-radius: 50px;
-  color: #fff;
-  font-size: 13px;
-  font-family: "Noto Sans KR", sans-serif;
-  transition: 0.3s;
   width: 300px;
-}
-main section#intro .container .btn-wrap .shortcut-btn:hover {
-  background-color: #8567FD;
-}
-main section#intro .container .btn-wrap .shortcut-btn i {
-  margin-left: 6px;
-  margin-top: 1.5px;
 }
 main section#skills {
   padding: 100px 8vw;
@@ -193,7 +196,7 @@ main section#skills .container .skills-sec h2::after {
   top: 0;
   width: 3px;
   height: 100%;
-  background-color: #ddd;
+  background-color: #d9d9d9;
 }
 main section#skills .container .skills-sec ul {
   width: 100%;
@@ -281,6 +284,32 @@ main section#experience {
 }
 main section#portfolio {
   padding: 100px 8vw;
+}
+main section#portfolio .container h2 {
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  margin-bottom: 30px;
+}
+main section#portfolio .container h2::after {
+  display: block;
+  position: absolute;
+  content: "";
+  left: -8px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #d9d9d9;
+}
+main section#portfolio .container .project {
+  display: flex;
+  margin-bottom: 80px;
+}
+main section#portfolio .container .project figure img {
+  width: 50%;
+}
+main section#portfolio .container .project .project-content {
+  display: flex;
+  flex-direction: column;
 }
 main section#contact {
   padding: 100px 8vw;

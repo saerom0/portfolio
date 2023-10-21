@@ -28,6 +28,10 @@ $kor-font : 'Noto Sans KR', sans-serif;
 	}
 }
 
+a.shortcut-btn{
+	@include shortcut-btn();
+}
+
 header {
 	position: fixed;
 	top: 0;
@@ -126,7 +130,6 @@ main {
 				justify-content: center;
 				align-items: center;
 				.shortcut-btn{
-					@include shortcut-btn();
 					width: 300px;
 				}
 			}
@@ -149,7 +152,7 @@ main {
 						top:0;
 						width: 3px;
 						height: 100%;
-						background-color: #ddd;
+						background-color: #d9d9d9;
 					}
 				}
 				ul{
@@ -245,6 +248,34 @@ main {
 	}
 	section#portfolio{
 		padding: 100px 8vw;
+		.container{
+			h2{
+				font-family: $eng-font;
+				position: relative;
+				margin-bottom: 30px;
+				&::after{
+					display: block;
+					position: absolute;
+					content: '';
+					left: -8px;
+					top:0;
+					width: 3px;
+					height: 100%;
+					background-color: #d9d9d9;
+				}
+			}
+			.project{
+				display: flex;
+				margin-bottom: 80px;
+				figure img{
+					width: 50%;
+				}
+				.project-content{
+					display: flex;
+					flex-direction: column;
+				}
+			}
+		}
 	}
 	section#contact{
 		padding: 100px 8vw;
