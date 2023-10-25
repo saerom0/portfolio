@@ -62,7 +62,7 @@ a.shortcut-btn {
   transition: 0.3s;
 }
 a.shortcut-btn:hover {
-  background-color: #8567FD;
+  background-color: #8567fd;
 }
 a.shortcut-btn i {
   margin-left: 6px;
@@ -75,7 +75,7 @@ header {
   left: 0;
   width: 330px;
   height: 100vh;
-  background-color: #8567FD;
+  background-color: #8567fd;
   z-index: 3;
 }
 header #menu {
@@ -112,10 +112,13 @@ header #menu .nav-list li {
   width: 100%;
   height: 100%;
   transition: 0.5s;
+  border-radius: 50px;
 }
 header #menu .nav-list li:hover {
-  background-color: #B19EFD;
-  border-radius: 50px;
+  background-color: #b19efd;
+}
+header #menu .nav-list li.active {
+  background-color: #b19efd;
 }
 header #menu .nav-list li a {
   width: 100%;
@@ -239,7 +242,8 @@ main section#skills .container .skills-sec ul li .icon-frame {
   height: 50px;
   border-radius: 50%;
 }
-main section#skills .container .skills-sec ul li .icon-frame i, main section#skills .container .skills-sec ul li .icon-frame strong {
+main section#skills .container .skills-sec ul li .icon-frame i,
+main section#skills .container .skills-sec ul li .icon-frame strong {
   font-size: 25px;
   position: absolute;
   top: 50%;
@@ -258,28 +262,28 @@ main section#skills .container .skills-sec ul li span.js-text {
   font-size: 12.5px;
 }
 main section#skills .container .skills-sec.dev ul li:nth-of-type(1) .icon-frame {
-  background: #F06933;
+  background: #f06933;
 }
 main section#skills .container .skills-sec.dev ul li:nth-of-type(2) .icon-frame {
-  background: #529CF1;
+  background: #529cf1;
 }
 main section#skills .container .skills-sec.dev ul li:nth-of-type(3) .icon-frame {
-  background: #D579AA;
+  background: #d579aa;
 }
 main section#skills .container .skills-sec.dev ul li:nth-of-type(4) .icon-frame {
-  background: #80D6F8;
+  background: #80d6f8;
 }
 main section#skills .container .skills-sec.dev ul li:nth-of-type(5) .icon-frame {
-  background: #F7CA4E;
+  background: #f7ca4e;
 }
 main section#skills .container .skills-sec.design ul li:nth-of-type(1) .icon-frame {
-  background: #F06933;
+  background: #f06933;
 }
 main section#skills .container .skills-sec.design ul li:nth-of-type(2) .icon-frame {
-  background: #31A8FF;
+  background: #31a8ff;
 }
 main section#skills .container .skills-sec.design ul li:nth-of-type(3) .icon-frame {
-  background: #FF9A00;
+  background: #ff9a00;
 }
 main section#experience {
   padding: 100px 8vw;
@@ -360,6 +364,7 @@ main section#portfolio .container .resume-explain {
   margin-bottom: 50px;
 }
 main section#contact {
+  height: 100vh;
   padding: 100px 8vw;
   background-color: #eee;
 }
