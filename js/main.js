@@ -2,7 +2,7 @@
 const pages = document.querySelectorAll('.page');
 const header = document.querySelector('header');
 const nav_btns = header.querySelectorAll('header #menu .nav-list li');
-const view_btns = document.querySelectorAll('#main a');
+const view_btn = document.querySelector('main #intro .view-btn');
 const speed = 500;
 let posArr = [];
 
@@ -16,11 +16,28 @@ window.addEventListener('scroll', () => {
 
 window.addEventListener('resize', getPos);
 
+//header 메뉴 클릭
+nav_btns.forEach((el, idx) => {
+  el.addEventListener("click", e => {
+    e.preventDefault();
+    header.classList.remove('active');
+    isActiveScrolling();
+    moveScrolling(idx);
+  })
+})
+//포트폴리오&이력서 바로가기 버튼 클릭
+view_btn.addEventListener("click", e => {
+  e.preventDefault();
+  moveScrolling(3);
+})
+
+
+
+
 //스크롤값 저장
 function getPos() {
   posArr = [];
   for (const el of pages) posArr.push(el.offsetTop);
-
 }
 
 //스크롤 활성화
@@ -33,19 +50,12 @@ function activeScroll() {
     }
   })
 }
-//header 메뉴 클릭
-nav_btns.forEach((el, idx) => {
-  el.addEventListener("click", (e) => {
-    e.preventDefault();
-    header.classList.remove('active');
-    isActiveScrolling();
-    moveScrolling(idx);
-  })
-})
+
 //스크롤이동
 function moveScrolling(idx) {
   window.scrollTo({ left: 0, top: posArr[idx], behavior: 'smooth' });
 }
+
 //스크롤방지
 function isActiveScrolling() {
   isActive = header.classList.contains('active');

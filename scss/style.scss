@@ -101,8 +101,11 @@ main {
 	section#intro {
 		height: 100vh;
 		position: relative;
-		background: url(../image/intro_bg.jpg) no-repeat
-			center/cover fixed;
+		background-image: url(../image/intro_bg.jpg);
+		background-position: 100px 50%;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: cover;
 		.container {
 			width: 60%;
 			height: 100%;
@@ -258,22 +261,35 @@ main {
 		padding: 100px 8vw;
 		background-color: #eee;
 		.container {
-			article {
-				display: flex;
-				align-items: center;
-				gap: 20px;
+			.exp {
 				margin-bottom: 50px;
-				.exp-logo {
-					img {
-						width: 100px;
+				h2 {
+					font-family: $eng-font;
+					position: relative;
+					margin-bottom: 30px;
+					&::after {
+						display: block;
+						position: absolute;
+						content: "";
+						left: -8px;
+						top: 0;
+						width: 3px;
+						height: 100%;
+						background-color: #d9d9d9;
 					}
 				}
 				.exp-content {
-					.exp-period {
-						margin-right: 20px;
-					}
-					p {
-						display: inline-block;
+					display: flex;
+					align-items: center;
+					margin-bottom: 30px;
+					gap: 20px;
+					.exp-logo {
+						width: 80px;
+						img {
+							width: 100%;
+							height: 100%;
+							object-fit: cover;
+						}
 					}
 				}
 			}
@@ -354,6 +370,46 @@ main {
 				gap: 20px;
 				color: #282828;
 			}
+		}
+	}
+}
+
+@media screen and (max-width: 1500px) {
+	main {
+		section#intro {
+			background-position: 150px 0;
+		}
+		section#skills {
+			padding: 80px 6vw;
+		}
+		section#experience {
+			padding: 80px 6vw;
+		}
+		section#portfolio {
+			padding: 80px 6vw;
+		}
+		section#contact {
+			padding: 80px 6vw;
+		}
+	}
+	a.shortcut-btn {
+		height: 48px;
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	header {
+		width: 100%;
+		height: 80px;
+	}
+	main {
+		top: 80px;
+		left: 0;
+		width: 100%;
+		section#intro {
+			height: calc(100vh - 80px);
+			background-position: center;
 		}
 	}
 }

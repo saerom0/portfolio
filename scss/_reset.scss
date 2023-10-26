@@ -20,11 +20,10 @@ table {
 	border-collapse: collapse;
 }
 
-
 h1 {
 	font-size: 45px;
 	font-weight: bold;
-	font-family: 'Montserrat';
+	font-family: "Montserrat";
 }
 h2 {
 	font-size: 20px;
@@ -41,5 +40,21 @@ span {
 		content: "";
 		display: block;
 		clear: both;
+	}
+}
+@media screen and (max-width: 1300px) {
+	.container {
+		width: 100%;
+		margin: 30px 0;
+	}
+	h1 {
+		font-size: 35px;
+	}
+	h2 {
+		font-size: 16px;
+	}
+	p,
+	span {
+		font-size: 13px;
 	}
 }
