@@ -161,28 +161,35 @@ main section#intro {
   background-attachment: fixed;
   background-size: cover;
 }
+main section#intro.on .container {
+  display: none;
+}
 main section#intro .container {
-  width: 60%;
+  width: 45%;
   height: 100%;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  transition: 0.5s;
+  /*position: fixed;
+  left: 35%;*/
 }
 main section#intro .container h1 {
   font-size: 60px;
   margin-bottom: 50px;
   color: #fff;
+  transform: perspective(600px) rotateY(-10deg) skewY(2deg);
 }
 main section#intro .container h1 b {
   display: block;
   margin-top: 20px;
 }
 main section#intro .container p {
+  transform: perspective(600px) rotateY(-15deg) skewY(4deg);
   color: #fff;
   position: relative;
   width: 100%;
-  margin-left: 20px;
   margin-bottom: 100px;
 }
 main section#intro .container p::after {
@@ -262,17 +269,17 @@ main section#skills .container .skills-sec ul li .icon-frame {
   height: 50px;
   border-radius: 50%;
 }
-main section#skills .container .skills-sec ul li .icon-frame i,
+main section#skills .container .skills-sec ul li .icon-frame img,
 main section#skills .container .skills-sec ul li .icon-frame strong {
-  font-size: 25px;
+  height: 25px;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 main section#skills .container .skills-sec ul li .icon-frame strong {
-  font-size: 20px;
-  transform: translate(-50%, -51%);
+  font-size: 22px;
+  transform: translate(-50%, -60%);
 }
 main section#skills .container .skills-sec ul li span {
   font-family: "Montserrat", sans-serif;

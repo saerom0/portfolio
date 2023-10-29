@@ -1,5 +1,5 @@
 //변수 선언
-const pages = document.querySelectorAll('.page');
+const pages = document.querySelectorAll('section');
 const header = document.querySelector('header');
 const nav_btns = header.querySelectorAll('header #menu .nav-list li');
 const view_btn = document.querySelector('main #intro .view-btn');
@@ -8,13 +8,14 @@ let posArr = [];
 
 
 getPos();
+window.addEventListener('resize', getPos);
 
 window.addEventListener('scroll', () => {
   getPos();
   activeScroll();
 })
 
-window.addEventListener('resize', getPos);
+
 
 //header 메뉴 클릭
 nav_btns.forEach((el, idx) => {
@@ -48,6 +49,12 @@ function activeScroll() {
       for (const el of nav_btns) el.classList.remove('active');
       nav_btns[idx].classList.add('active');
     }
+    // if(scroll >= posArr[idx] + 300){
+    //   for (const el of pages) {
+    //     el.classList.add('on');
+    // }
+    //   pages[idx].classList.remove('on');
+    // }
   })
 }
 
