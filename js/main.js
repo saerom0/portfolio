@@ -13,6 +13,39 @@ window.addEventListener('resize', getPos);
 window.addEventListener('scroll', () => {
   getPos();
   activeScroll();
+  let scroll = window.screenY || window.pageYOffset;
+
+  //intro
+  if (scroll >= posArr[0] + 100) {
+		pages[0].classList.add('on');
+    console.log(posArr);
+	} else {
+		pages[0].classList.remove('on');
+	}
+  //skiils
+	if (scroll >= posArr[1] - 500) {
+		pages[1].classList.add('on');
+	} else {
+		pages[1].classList.remove('on');
+	}
+  //experience
+  if (scroll >= posArr[2] - 500) {
+		pages[2].classList.add('on');
+	} else {
+		pages[2].classList.remove('on');
+	}
+  //portfolio
+  if (scroll >= posArr[3] - 500) {
+		pages[3].classList.add('on');
+	} else {
+		pages[3].classList.remove('on');
+	}
+  //contact
+  if (scroll >= posArr[4] - 500) {
+		pages[4].classList.add('on');
+	} else {
+		pages[4].classList.remove('on');
+	}
 })
 
 
@@ -43,7 +76,7 @@ function getPos() {
 
 //스크롤 활성화
 function activeScroll() {
-  const scroll = window.screenY || window.pageYOffset;
+  let scroll = window.screenY || window.pageYOffset;
   pages.forEach((_, idx) => {
     if (scroll >= posArr[idx] - 300) {
       for (const el of nav_btns) el.classList.remove('active');
