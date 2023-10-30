@@ -102,6 +102,7 @@ header #menu {
   height: 100%;
   padding-top: 150px;
   padding-bottom: 150px;
+  position: relative;
 }
 header #menu .profile {
   width: 200px;
@@ -144,6 +145,67 @@ header #menu .nav-list li a {
   align-items: center;
   font-family: "Montserrat", sans-serif;
   color: #fff;
+}
+header #menu .call-btn {
+  display: none;
+  width: 40px;
+  height: 40px;
+  z-index: 4;
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+header #menu .call-btn span {
+  width: 100%;
+  height: 2px;
+  background-color: #282828;
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+  left: 0;
+  text-indent: -99999px;
+  opacity: 1;
+  transform: translateX(0%);
+  transition: 1s;
+}
+header #menu .call-btn::before, header #menu .call-btn::after {
+  display: block;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #282828;
+  position: absolute;
+  left: 0;
+  transform: rotate(0deg);
+}
+header #menu .call-btn::before {
+  top: 0;
+  transition: top 0.5s 0s, transform 0.5s 0.5s;
+}
+header #menu .call-btn::after {
+  bottom: 0;
+  transition: bottom 0.5s 0s, transform 0.5s 0.5s;
+}
+header #menu .call-btn.active span {
+  transform: translateX(100%);
+  opacity: 0;
+}
+header #menu .call-btn.active::before {
+  transform: rotate(-45deg);
+  top: calc(50% - 1px);
+}
+header #menu .call-btn.active::after {
+  transform: rotate(45deg);
+  bottom: calc(50% - 1px);
+}
+header #menu .mob-list {
+  width: 100%;
+  background-color: #8567fd;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -100%;
+  z-index: 2;
 }
 
 main {
@@ -457,7 +519,7 @@ main section#contact .container {
 }
 main section#contact .container .contact-img {
   float: left;
-  width: 40%;
+  width: 47%;
   margin-right: 10%;
 }
 main section#contact .container .contact-img img {
@@ -467,7 +529,7 @@ main section#contact .container .contact-img img {
 }
 main section#contact .container .contact-info {
   float: left;
-  width: 40%;
+  width: 35%;
   margin-top: 50px;
 }
 main section#contact .container .contact-info a {
@@ -526,6 +588,24 @@ main section#contact .container .contact-info a {
   main section#intro {
     height: calc(100vh - 80px);
     background-position: center;
+  }
+}
+@media screen and (max-width: 850px) {
+  header #menu .profile {
+    position: absolute;
+    left: calc((100% - 90px) / 2);
+  }
+  header #menu .nav-list {
+    display: none;
+  }
+  header #menu .call-btn {
+    display: block;
+  }
+  header #menu .mob-list {
+    display: flex;
+  }
+  main section#intro p {
+    display: none;
   }
 }
 

@@ -3,6 +3,8 @@ const pages = document.querySelectorAll('section');
 const header = document.querySelector('header');
 const nav_btns = header.querySelectorAll('header #menu .nav-list li');
 const view_btn = document.querySelector('main #intro .view-btn');
+const call_btn = header.querySelector('.call-btn');
+const mob_list = header.querySelector('.mob-list');
 const speed = 500;
 let posArr = [];
 
@@ -60,12 +62,17 @@ nav_btns.forEach((el, idx) => {
   })
 })
 //포트폴리오&이력서 바로가기 버튼 클릭
-view_btn.addEventListener("click", e => {
+call_btn.addEventListener("click", e => {
   e.preventDefault();
   moveScrolling(3);
 })
 
-
+//view-btn (햄버거버튼)
+call_btn.addEventListener("click",e=>{
+  e.preventDefault();
+  call_btn.classList.toggle('active');
+  mob_list.classList.toggle('active');
+})
 
 
 //스크롤값 저장
