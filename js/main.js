@@ -19,35 +19,35 @@ window.addEventListener('scroll', () => {
 
   //intro
   if (scroll >= posArr[0] + 100) {
-		pages[0].classList.add('on');
+    pages[0].classList.add('on');
     console.log(posArr);
-	} else {
-		pages[0].classList.remove('on');
-	}
+  } else {
+    pages[0].classList.remove('on');
+  }
   //skiils
-	if (scroll >= posArr[1] - 500) {
-		pages[1].classList.add('on');
-	} else {
-		pages[1].classList.remove('on');
-	}
+  if (scroll >= posArr[1] - 500) {
+    pages[1].classList.add('on');
+  } else {
+    pages[1].classList.remove('on');
+  }
   //experience
   if (scroll >= posArr[2] - 500) {
-		pages[2].classList.add('on');
-	} else {
-		pages[2].classList.remove('on');
-	}
+    pages[2].classList.add('on');
+  } else {
+    pages[2].classList.remove('on');
+  }
   //portfolio
   if (scroll >= posArr[3] - 500) {
-		pages[3].classList.add('on');
-	} else {
-		pages[3].classList.remove('on');
-	}
+    pages[3].classList.add('on');
+  } else {
+    pages[3].classList.remove('on');
+  }
   //contact
   if (scroll >= posArr[4] - 500) {
-		pages[4].classList.add('on');
-	} else {
-		pages[4].classList.remove('on');
-	}
+    pages[4].classList.add('on');
+  } else {
+    pages[4].classList.remove('on');
+  }
 })
 
 
@@ -62,13 +62,13 @@ nav_btns.forEach((el, idx) => {
   })
 })
 //포트폴리오&이력서 바로가기 버튼 클릭
-call_btn.addEventListener("click", e => {
+view_btn.addEventListener("click", e => {
   e.preventDefault();
   moveScrolling(3);
 })
 
 //view-btn (햄버거버튼)
-call_btn.addEventListener("click",e=>{
+call_btn.addEventListener("click", e => {
   e.preventDefault();
   call_btn.classList.toggle('active');
   mob_list.classList.toggle('active');
